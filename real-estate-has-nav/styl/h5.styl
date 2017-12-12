@@ -1,0 +1,348 @@
+ptr(pt)
+ n = (pt*2*(640/750))/100
+ n = unit(n,rem)
+ return n
+
+nav,header,footer,article,section
+  display: block;
+
+
+.nav-top,
+.sec-box,
+.footer,
+.my-comment,
+.article,
+.like-share,
+.comment-list
+  width: 100%
+a
+  color: rgb(59,157,241)
+  text-decoration: none
+.nav-top
+  height: ptr(60)
+  border-bottom: 1px solid #dfe0e5
+  font-size: 0
+  background-color #fff
+  position fixed
+  top 0
+  left 0
+  z-index 100
+
+.nav-top .nav-l,
+.nav-top .nav-r
+  display: inline-block
+  height: 100%
+  vertical-align: top
+  background-color #fff
+
+.nav-top .nav-l
+  width: 73.2%
+  box-sizing: border-box
+  padding-top ptr(10)
+  padding-left ptr(20)
+
+.nav-top .nav-r
+  width: 26.8%
+  text-align: center
+  line-height: ptr(60)
+
+.nav-top .nav-l h5
+  height ptr(21)
+  font-size: ptr(18)
+  font-weight: bold
+  margin-bottom: ptr(3)
+
+.nav-top .nav-l p
+  font-size: ptr(14)
+
+.nav-top .nav-r .load-btn
+  width: ptr(60)
+  height: ptr(30)
+  outline: none
+  border: none
+  color: #fff
+  border-radius: ptr(100)
+  font-size: ptr(14)
+  background-color: #3b9df1
+  margin-top: ptr(15)
+
+.sec-box
+  margin-top: ptr(60)
+  border-bottom: ptr(8) solid #ebecf1
+  padding: 0 ptr(20)
+  box-sizing: border-box
+
+// .sec-box .my-box,
+// .comment-list .my-box
+//   width: 100%
+//   height: 1.4rem
+//   font-size: 0
+  /* background-color:red; */
+
+.my-box
+  position: relative
+  width: 100%
+  height: 1.4rem
+  font-size: 0
+
+.my-box .head-img,
+.my-box .desc
+  display: inline-block
+  vertical-align: top
+
+.my-box .head-img
+  width: ptr(40)
+  height: ptr(40)
+  border-radius: 50%
+  background: #333
+  background-image: url(../img/2.jpg)
+  background-position: center
+  background-size: cover
+  background-repeat: no-repeat
+  margin: 0.3rem 0.17rem 0.4rem 0
+
+.my-box .desc
+  width: 4.84rem
+  height: 100%
+
+.my-box strong
+  display: block
+  color: rgb(32,36,55)
+  font-size: ptr(16)
+  height: ptr(20)
+  line-height: ptr(20)
+  margin-top: ptr(20)
+
+.my-box p
+  color: rgb(121, 126, 139)
+  font-size: ptr(12)
+  height: ptr(14)
+  line-height: ptr(14)
+
+.my-box span
+  display: block
+  color: rgb(121, 126, 139)
+  font-size: ptr(12)
+
+.my-box .more
+  position: absolute
+  top: 0
+  right: 0
+  width: 0.3rem
+  height: 0.82rem
+  background: url(../img/listMore@2x.png) no-repeat center/contain
+
+.text-comment
+  font-size: ptr(14)
+  text-align: left
+  line-height: ptr(20)
+  color: rgb(32,36,55)
+  // background-color: lightgreen
+  // height: 1rem
+.like-share
+  height: ptr(50)
+  font-size: ptr(14)
+
+.like-share p
+  display: inline-block
+  height: 100%
+  color: #606676
+  line-height: ptr(50)
+  padding-right: 0.1rem
+
+.like-share p>span
+  color: #000
+  padding-right: 0.1rem
+  font-weight: bold
+
+.comment-list
+  padding: 0 ptr(20)
+  box-sizing: border-box
+  margin-bottom: 1rem
+
+.comment-list .com-item
+  border-bottom: ptr(1) solid rgb(235,236,241)
+
+.comment-list .list-num
+  font-size: ptr(18)
+  color: rgb(32,26,35)
+  margin-top: ptr(25)
+
+.comment-list .com-text
+  width: 4.84rem
+  // height: 3rem
+  // background-color: red
+  color: rgb(32,36,55)
+  margin-left: ptr(50)
+  margin-bottom: ptr(10)
+  font-size: ptr(14)
+  line-height: ptr(20)
+.comment-list .no-comment
+  font-size: ptr(16)
+  line-height: ptr(20)
+  margin-top: ptr(80)
+  text-align: center
+  color: #000000
+  height: 2rem;
+.footer
+  height: ptr(60)
+  position: fixed
+  bottom: 0
+  left: 0
+  z-index: 100
+  border-top: 1px solid rgb(198,200,209)
+  box-sizing: border-box
+  background-color: rgba(255,255,255,0.9)  
+  padding-left ptr(20)
+  font-size 0
+
+.footer .com-input,
+.footer .com-icon
+  display: inline-block
+  height 100%
+  vertical-align top
+  line-height ptr(60)
+  background-color #fff
+
+.footer .com-input
+  width ptr(240)  
+  position: relative
+  input
+    width: ptr(240)
+    height: ptr(30)
+    outline: none 
+    border: none
+    font-size ptr(14)
+    color rgb(169,177,210)
+    text-indent: ptr(10)
+    border-radius: ptr(100)
+    background-color: rgb(246,247,251)
+    margin-top: ptr(15)
+  .i-emoji
+    position: absolute
+    top: ptr(9)
+    right: ptr(-7)
+    display: inline-block
+    width: ptr(44)
+    height: ptr(44)
+    background:url('../img/enterIconEmoticon1.png') no-repeat
+    background-position center
+    background-size ptr(24) ptr(24)
+.footer .com-icon
+  width: ptr(115)
+  text-align right
+.footer .com-icon>span
+  display: inline-block
+  width: ptr(44)
+  height: ptr(44)
+  margin-top ptr(8)
+
+.footer .com-icon .i-good
+  background:url('../img/enterIconThumbUp1.png') no-repeat
+  background-position center
+  background-size ptr(24) ptr(24)
+
+.footer .com-icon .i-share
+  background:url('../img/navShare1.png') no-repeat
+  background-position center
+  background-size ptr(24) ptr(24)
+  margin-right ptr(10)
+
+//img||other style
+
+.other-article
+  margin-top: ptr(15)
+  border 1px solid #e1e2e6
+  width: 100%
+  box-sizing: border-box
+  padding: ptr(10)
+  background-color: #eeeff5
+  .my-box
+    background-color: #eeeff5
+    height: ptr(45)
+    .desc
+      width: 4.3rem
+      strong 
+        margin-top: 0
+    .head-img
+      width: ptr(35)
+      height: ptr(35)
+      margin 0 ptr(10) 0 0
+  .one-img
+    .img-item 
+      width: 100%
+      height: ptr(155)
+  .two-img
+    .img-item 
+      width: ptr(154)
+      height: ptr(154)
+  .three-img
+    .img-item  
+      width: ptr(101)
+      height: ptr(101)     
+  .text-comment
+    background-color: #eeeff5
+  .img-comment
+    background-color: #eeeff5
+.img-comment
+  margin-top: ptr(15)
+.one-img
+  .img-item 
+    width: 100%
+    height: ptr(180)
+    background-image: url(../img/1.jpg)
+    background-position: center 
+    background-size: cover
+    background-repeat: no-repeat
+    border-radius: ptr(2)
+
+.two-img
+  font-size: 0
+  .img-item 
+    display: inline-block
+    vertical-align: top
+    width:ptr(165)
+    height: ptr(165)
+    border-radius: ptr(2)
+    margin-bottom: ptr(5)    
+    background-position: center 
+    background-size: cover
+    background-repeat: no-repeat
+    background-image: url(../img/1.jpg)
+    &:nth-of-type(odd)
+      margin-right: ptr(5)
+.three-img
+  font-size: 0
+  .img-item 
+    display: inline-block  
+    vertical-align: top  
+    width: ptr(108)
+    height: ptr(108)
+    margin-bottom: ptr(5)
+    border-radius: ptr(2)
+    background-position: center 
+    background-size: cover
+    background-repeat: no-repeat
+    background-image: url(../img/1.jpg)
+    &:not(:nth-of-type(3n))
+      margin-right: ptr(5)   
+    .more-mask
+        width: 100%
+        height: 100%
+        font-size: ptr(36)
+        color: #ffffff
+        background-color: rgba(36,146,252,0.3)
+        text-align: center
+        line-height: 3
+
+//show images
+.mask-box
+  // display: none
+  position: fixed
+  z-index: 200
+  top: 0
+  bottom: 0
+  left: 0
+  right: 0
+  background-color: #000000
+
