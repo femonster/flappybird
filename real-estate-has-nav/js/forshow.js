@@ -139,7 +139,7 @@ var count = 0;
 var sortRaf = null;
 
 function sortToshow(res) {
-    sortRaf && window.cancelAnimationFrame(sortRaf);
+    // sortRaf && window.cancelAnimationFrame(sortRaf);
     var src = res.dataset.echoBackground;
     var img = new Image();
     var index = res.dataset.sort;
@@ -147,13 +147,13 @@ function sortToshow(res) {
         if (count == index) {
             res.style.opacity = 1;
             count++;
-            if (count >= mySliderNum() + othSliderNum() - 1) {
-                window.cancelAnimationFrame(sortRaf);
-            }
+            // if (count >= mySliderNum() + othSliderNum() - 1) {
+                // window.cancelAnimationFrame(sortRaf);
+            // }
         } else {
-            sortRaf = requestAnimationFrame(function() {
+            // sortRaf = requestAnimationFrame(function() {
                 sortToshow(res);
-            })
+            // })
         }
         res.dataset.w = img.width;
         res.dataset.h = img.height;
@@ -162,9 +162,9 @@ function sortToshow(res) {
 
     img.onerror = function() {
         count++;
-        if (count >= mySliderNum() + othSliderNum() - 1) {
-            window.cancelAnimationFrame(sortRaf);
-        }
+        // if (count >= mySliderNum() + othSliderNum() - 1) {
+            // window.cancelAnimationFrame(sortRaf);
+        // }
     }
     img.src = src;
 }

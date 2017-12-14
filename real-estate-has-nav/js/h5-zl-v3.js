@@ -171,8 +171,8 @@ var slider = {
                 "index": temp.dataset.i,
                 "url": temp.dataset.echoBackground,
                 "isload": temp.dataset.isload,
-                "width": temp.dataset.w,
-                "height": temp.dataset.h
+                "width": temp.dataset.w||30,
+                "height": temp.dataset.h||30
             })
         }
         this._render(i, len, this.imgArr);
@@ -228,14 +228,6 @@ window.addEventListener("DOMContentLoaded", function() {
             alert("请前往APP store下载");
         }
     })
-
-    // document.querySelector(".s-current").addEventListener("touchstart", function(e) {
-    //     console.log(e);
-    //     if (hasClass(e.target, "s-current")) {
-    //         var disX = e.touches[0].clientX;
-    //         console.log(disX);
-    //     }
-    // })
 
     navBox.addEventListener("click", function(e) {
 
